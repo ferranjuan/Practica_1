@@ -1,21 +1,36 @@
 import sys
-from PyQt5 import QtCore, QtGui, uic
-from PyQt5.QtWidgets import QMainWindow, QApplication, QMessageBox
+from PyQt5 import uic
+from PyQt5.QtWidgets import QWidget, QApplication
 
-# Cargar formulario *.ui
+# Cargar nuestro formulario *.ui
 form_class = uic.loadUiType("Calculadora.ui")[0]
 
 
-# crear clase MyWindowClass
-class MyWindowClass(QMainWindow, form_class):
+# Crear la Clase MyWindowClass con el formulario cargado.
+class MyWindowClass(QWidget, form_class):
     def __init__(self, parent=None):
-        QMainWindow.__init__(self, parent)
+        QWidget.__init__(self, parent)
         self.setupUi(self)
+        self.res = ''
 
-    # Implementacion de slots
-    def mostra(self):
-        text = "Texto de prueba para ver que hacemos de nuevo"
-        QMessageBox.information(self, 'Botón', text)
+    # Implementacion de los Slots referenciados en QDesigner
+    def btpulsado(self):
+        boton = self.sender()  # boton tiene la informacion del botón pulsado
+        self.res += boton.text()
+        self.pantalla.setPlainText(self.res)
+
+    def evalua(self):
+        valor = eval(self.res)
+        self.res = '%0.4f' % valor
+        self.pantalla.setPlainText(self.res)
+
+    def borratodo(self):
+        self.res = ''
+        self.pantalla.setPlainText(self.res)
+
+    def borra(self):
+        self.res = self.res[:-1]
+        self.pantalla.setPlainText(self.res)
 
 
 if __name__ == '__main__':
