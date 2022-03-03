@@ -18,16 +18,20 @@ class MyWindowClass(QWidget, form_class):
         self.setupUi(self)
         self.res = ''
 
-    #Implementacion de los Slots referenciados en QDesigner
+    # Implementacion de los Slots referenciados en QDesigner
     def btpulsado(self):
         boton = self.sender()  # boton tiene la informacion del botón pulsado
         self.res += boton.text()
         self.pantalla.setPlainText(self.res)
 
     def evalua(self):
-        valor = eval(self.res)
-        self.res = '%0.4f' % valor
-        self.pantalla.setPlainText(self.res)
+        try:
+            valor = eval(self.res)
+            self.res = '%0.4f' % valor
+            self.pantalla.setPlainText(self.res)
+        except:
+            self.res = 'Expresión incorrecta'
+            self.pantalla.setPlainText(self.res)
 
     def borratodo(self):
         self.res = ''
@@ -38,19 +42,31 @@ class MyWindowClass(QWidget, form_class):
         self.pantalla.setPlainText(self.res)
 
     def seno(self):
-        valor = sin(eval(self.res) * pi / 180)
-        self.res = '%0.4f' % valor
-        self.pantalla.setPlainText(self.res)
+        try:
+            valor = sin(eval(self.res) * pi / 180)
+            self.res = '%0.4f' % valor
+            self.pantalla.setPlainText(self.res)
+        except:
+            self.res = 'Expresión incorrecta'
+            self.pantalla.setPlainText(self.res)
 
     def coseno(self):
-        valor = cos(eval(self.res) * pi / 180)
-        self.res = '%0.4f' % valor
-        self.pantalla.setPlainText(self.res)
+        try:
+            valor = cos(eval(self.res) * pi / 180)
+            self.res = '%0.4f' % valor
+            self.pantalla.setPlainText(self.res)
+        except:
+            self.res = 'Expresión incorrecta'
+            self.pantalla.setPlainText(self.res)
 
     def tangente(self):
-        valor = tan(eval(self.res) * pi / 180)
-        self.res = '%0.4f' % valor
-        self.pantalla.setPlainText(self.res)
+        try:
+            valor = tan(eval(self.res) * pi / 180)
+            self.res = '%0.4f' % valor
+            self.pantalla.setPlainText(self.res)
+        except:
+            self.res = 'Expresión incorrecta'
+            self.pantalla.setPlainText(self.res)
 
 
 if __name__ == '__main__':
