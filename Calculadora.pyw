@@ -1,9 +1,14 @@
+# -*- coding: utf-8 -*-
+
+# Base PyQt5
+
 import sys
+from math import pi, sin, cos, tan
 from PyQt5 import uic
 from PyQt5.QtWidgets import QWidget, QApplication
 
 # Cargar nuestro formulario *.ui
-form_class = uic.loadUiType("Calculadora.ui")[0]
+form_class = uic.loadUiType("calculadora.ui")[0]
 
 
 # Crear la Clase MyWindowClass con el formulario cargado.
@@ -13,7 +18,7 @@ class MyWindowClass(QWidget, form_class):
         self.setupUi(self)
         self.res = ''
 
-    # Implementacion de los Slots referenciados en QDesigner
+    #Implementacion de los Slots referenciados en QDesigner
     def btpulsado(self):
         boton = self.sender()  # boton tiene la informacion del botón pulsado
         self.res += boton.text()
@@ -30,6 +35,21 @@ class MyWindowClass(QWidget, form_class):
 
     def borra(self):
         self.res = self.res[:-1]
+        self.pantalla.setPlainText(self.res)
+
+    def seno(self):
+        valor = sin(eval(self.res) * pi / 180)
+        self.res = '%0.4f' % valor
+        self.pantalla.setPlainText(self.res)
+
+    def coseno(self):
+        valor = cos(eval(self.res) * pi / 180)
+        self.res = '%0.4f' % valor
+        self.pantalla.setPlainText(self.res)
+
+    def tangente(self):
+        valor = tan(eval(self.res) * pi / 180)
+        self.res = '%0.4f' % valor
         self.pantalla.setPlainText(self.res)
 
 
