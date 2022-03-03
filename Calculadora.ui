@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+    <class>Cuadro</class>
+    <widget class="QDialog" name="Cuadro">
+        <property name="geometry">
+            <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>400</width>
+                <height>300</height>
+            </rect>
+        </property>
+        <property name="windowTitle">
+            <string>Cuadro</string>
+        </property>
+        <widget class="QPushButton" name="btmostra">
+            <property name="geometry">
+                <rect>
+                    <x>110</x>
+                    <y>110</y>
+                    <width>161</width>
+                    <height>61</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Muestra</string>
+            </property>
+            <property name="default">
+                <bool>false</bool>
+            </property>
+            <property name="flat">
+                <bool>false</bool>
+            </property>
+        </widget>
+    </widget>
+    <resources/>
+    <connections>
+        <connection>
+            <sender>btmostra</sender>
+            <signal>clicked()</signal>
+            <receiver>Cuadro</receiver>
+            <slot>mostra()</slot>
+            <hints>
+                <hint type="sourcelabel">
+                    <x>218</x>
+                    <y>140</y>
+                </hint>
+                <hint type="destinationlabel">
+                    <x>222</x>
+                    <y>184</y>
+                </hint>
+            </hints>
+        </connection>
+    </connections>
+    <slots>
+        <slot>mostra()</slot>
+    </slots>
+</ui>
