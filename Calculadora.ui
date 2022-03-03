@@ -1,0 +1,775 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Calculadora</class>
+ <widget class="QDialog" name="Calculadora">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>417</width>
+    <height>457</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>417</width>
+    <height>457</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>417</width>
+    <height>457</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Calculadora</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>30</y>
+     <width>322</width>
+     <height>411</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTextEdit" name="pantalla">
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="cursor" stdset="0">
+       <cursorShape>BlankCursor</cursorShape>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+      <property name="acceptRichText">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="2">
+       <widget class="QPushButton" name="btpara">
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string>(</string>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QPushButton" name="btnueve">
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string>9</string>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QPushButton" name="btdivi">
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string>/</string>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QPushButton" name="btparc">
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string>)</string>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QPushButton" name="btcuatro">
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string>4</string>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="btsiete">
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string>7</string>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QPushButton" name="btclear">
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string>c</string>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="2">
+       <widget class="QPushButton" name="bttres">
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string>3</string>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2">
+       <widget class="QPushButton" name="btseis">
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string>6</string>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QPushButton" name="btback">
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string>&lt;-</string>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="3">
+       <widget class="QPushButton" name="btresta">
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string>-</string>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="btocho">
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string>8</string>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QPushButton" name="btcinco">
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string>5</string>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QPushButton" name="btdos">
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string>2</string>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QPushButton" name="btuno">
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string>1</string>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="3">
+       <widget class="QPushButton" name="btmulti">
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string>*</string>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="QPushButton" name="btcero">
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QPushButton" name="btcoma">
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string>.</string>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="2">
+       <widget class="QPushButton" name="btevalua">
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string>=</string>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="3">
+       <widget class="QPushButton" name="btsuma">
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string>+</string>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btclear</sender>
+   <signal>clicked()</signal>
+   <receiver>Calculadora</receiver>
+   <slot>borratodo()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>89</x>
+     <y>245</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>22</x>
+     <y>245</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btback</sender>
+   <signal>clicked()</signal>
+   <receiver>Calculadora</receiver>
+   <slot>borra()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>166</x>
+     <y>248</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>27</x>
+     <y>226</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btpara</sender>
+   <signal>clicked()</signal>
+   <receiver>Calculadora</receiver>
+   <slot>btpulsado()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>261</x>
+     <y>246</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>193</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btparc</sender>
+   <signal>clicked()</signal>
+   <receiver>Calculadora</receiver>
+   <slot>btpulsado()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>328</x>
+     <y>250</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>395</x>
+     <y>249</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btsiete</sender>
+   <signal>clicked()</signal>
+   <receiver>Calculadora</receiver>
+   <slot>btpulsado()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>101</x>
+     <y>293</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>30</x>
+     <y>293</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btocho</sender>
+   <signal>clicked()</signal>
+   <receiver>Calculadora</receiver>
+   <slot>btpulsado()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>171</x>
+     <y>290</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>11</x>
+     <y>280</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnueve</sender>
+   <signal>clicked()</signal>
+   <receiver>Calculadora</receiver>
+   <slot>btpulsado()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>261</x>
+     <y>291</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>21</x>
+     <y>318</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btdivi</sender>
+   <signal>clicked()</signal>
+   <receiver>Calculadora</receiver>
+   <slot>btpulsado()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>325</x>
+     <y>297</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>297</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btresta</sender>
+   <signal>clicked()</signal>
+   <receiver>Calculadora</receiver>
+   <slot>btpulsado()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>369</x>
+     <y>395</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>333</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btmulti</sender>
+   <signal>clicked()</signal>
+   <receiver>Calculadora</receiver>
+   <slot>btpulsado()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>369</x>
+     <y>352</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>396</x>
+     <y>378</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btsuma</sender>
+   <signal>clicked()</signal>
+   <receiver>Calculadora</receiver>
+   <slot>btpulsado()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>342</x>
+     <y>423</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>400</x>
+     <y>423</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btseis</sender>
+   <signal>clicked()</signal>
+   <receiver>Calculadora</receiver>
+   <slot>btpulsado()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>245</x>
+     <y>336</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>385</x>
+     <y>352</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttres</sender>
+   <signal>clicked()</signal>
+   <receiver>Calculadora</receiver>
+   <slot>btpulsado()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>264</x>
+     <y>377</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>381</x>
+     <y>398</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btevalua</sender>
+   <signal>clicked()</signal>
+   <receiver>Calculadora</receiver>
+   <slot>evalua()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>262</x>
+     <y>418</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>360</x>
+     <y>448</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btcuatro</sender>
+   <signal>clicked()</signal>
+   <receiver>Calculadora</receiver>
+   <slot>btpulsado()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>90</x>
+     <y>337</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>26</x>
+     <y>343</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btcinco</sender>
+   <signal>clicked()</signal>
+   <receiver>Calculadora</receiver>
+   <slot>btpulsado()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>159</x>
+     <y>333</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>22</x>
+     <y>375</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btdos</sender>
+   <signal>clicked()</signal>
+   <receiver>Calculadora</receiver>
+   <slot>btpulsado()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>174</x>
+     <y>371</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>39</x>
+     <y>428</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btcero</sender>
+   <signal>clicked()</signal>
+   <receiver>Calculadora</receiver>
+   <slot>btpulsado()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>107</x>
+     <y>425</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>106</x>
+     <y>442</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btcoma</sender>
+   <signal>clicked()</signal>
+   <receiver>Calculadora</receiver>
+   <slot>btpulsado()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>189</x>
+     <y>425</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>192</x>
+     <y>445</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btuno</sender>
+   <signal>clicked()</signal>
+   <receiver>Calculadora</receiver>
+   <slot>btpulsado()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>64</x>
+     <y>380</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>41</x>
+     <y>380</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>borratodo()</slot>
+  <slot>borra()</slot>
+  <slot>pab()</slot>
+  <slot>pcerr()</slot>
+  <slot>cero()</slot>
+  <slot>uno()</slot>
+  <slot>dos()</slot>
+  <slot>tres()</slot>
+  <slot>cuatro()</slot>
+  <slot>cinco()</slot>
+  <slot>seis()</slot>
+  <slot>siete()</slot>
+  <slot>ocho()</slot>
+  <slot>nueve()</slot>
+  <slot>suma()</slot>
+  <slot>resta()</slot>
+  <slot>mult()</slot>
+  <slot>div()</slot>
+  <slot>evalua()</slot>
+  <slot>coma()</slot>
+  <slot>btpulsado()</slot>
+ </slots>
+</ui>
