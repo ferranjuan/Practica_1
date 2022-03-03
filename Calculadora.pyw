@@ -18,16 +18,20 @@ class MyWindowClass(QWidget, form_class):
         self.setupUi(self)
         self.res = ''
 
-    #Implementacion de los Slots referenciados en QDesigner
+    # Implementacion de los Slots referenciados en QDesigner
     def btpulsado(self):
         boton = self.sender()  # boton tiene la informacion del botón pulsado
         self.res += boton.text()
         self.pantalla.setPlainText(self.res)
 
     def evalua(self):
-        valor = eval(self.res)
-        self.res = '%0.4f' % valor
-        self.pantalla.setPlainText(self.res)
+        try:
+            valor = eval(self.res)
+            self.res = '%0.4f' % valor
+            self.pantalla.setPlainText(self.res)
+        except:
+            self.res = 'Expresión incorrecta'
+            self.pantalla.setPlainText(self.res)
 
     def borratodo(self):
         self.res = ''
