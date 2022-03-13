@@ -30,7 +30,7 @@ class MiFormulario(QWidget, form_class):
             self.res = '%0.4f' % valor
             self.pantalla.setPlainText(self.res)
         except:
-            QMessageBox.information(self, 'error', 'expresion incorrecta')
+            QMessageBox.information(self, 'error', 'Esta expresión tiene un error')
             self.res = ''
             self.pantalla.setPlainText(self.res)
 
