@@ -5,7 +5,7 @@
 import sys
 from math import pi, sin, cos, tan
 from PyQt5 import uic
-from PyQt5.QtWidgets import QWidget, QApplication
+from PyQt5.QtWidgets import QWidget, QApplication, QMessageBox
 
 # Cargar nuestro formulario *.ui
 form_class = uic.loadUiType("calculadora.ui")[0]
@@ -30,7 +30,8 @@ class MyChairClass(QWidget, form_class):
             self.res = '%0.4f' % valor
             self.pantalla.setPlainText(self.res)
         except:
-            self.res = 'Expresión incorrecta'
+            QMessageBox.information(self, 'error', 'expresion incorrecta')
+            self.res = ''
             self.pantalla.setPlainText(self.res)
 
     def borratodo(self):
