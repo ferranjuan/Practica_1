@@ -11,8 +11,8 @@ from PyQt5.QtWidgets import QWidget, QApplication, QMessageBox
 form_class = uic.loadUiType("calculadora.ui")[0]
 
 
-# Crear la Clase MyWindowClass con el formulario cargado.
-class MyDoorClass(QWidget, form_class):
+# Crear la Clase MiCalculadora con el formulario cargado.
+class MiCalculadora(QWidget, form_class):
     def __init__(self, parent=None):
         QWidget.__init__(self, parent)
         self.setupUi(self)
@@ -72,6 +72,6 @@ class MyDoorClass(QWidget, form_class):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    MyWindow = MyWindowClass(None)
+    MyWindow = MiCalculadora(None)
     MyWindow.show()
     app.exec_()
