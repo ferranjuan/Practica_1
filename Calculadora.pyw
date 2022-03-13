@@ -12,7 +12,7 @@ form_class = uic.loadUiType("calculadora.ui")[0]
 
 
 # Crear la Clase MyWindowClass con el formulario cargado.
-class MyWindowClass(QWidget, form_class):
+class MyDoorClass(QWidget, form_class):
     def __init__(self, parent=None):
         QWidget.__init__(self, parent)
         self.setupUi(self)
